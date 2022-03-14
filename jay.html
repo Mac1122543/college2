@@ -1,0 +1,33 @@
+<html>
+<body>
+<script type="text/javascript">
+	function fun1(id) {
+		id.innerHTML="Mouse hover";
+
+	}
+	function fun2(id){
+		id.innerHTML="mouse out";
+	}
+	function fun(j)
+	{
+		switch (j.button)
+		{
+			case 0:
+			alert("left button");
+			break;
+			case 1:
+			alert("middle button");
+			break;
+			case 2:
+			alert("right button");
+			break;
+		}
+	}
+</script>
+<div style="width: 50%; height: 30%;border: 2px solid red;background-color: green" onmouseover="fun1(this)" onmouseout="fun2(this)" onmousedown="fun(event )">
+	This is div
+	
+</div>
+</body>
+
+</html>

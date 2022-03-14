@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="d3.v6.min.js"></script>
+</head>
+<body>
+    
+</body>
+<script>
+    var arr=['A','B','C','D','E','F','G'];
+    var a1=['B','C','G','X'];
+    document.write("array1 is: "+arr+"<br/>  ");
+    document.write("array2 is: "+a1+"<br/> ");
+
+    // print elements which are not present in a1
+    var a2=arr.filter(function(e){
+        return !a1.includes(e);
+    })
+    document.write("<br/> "+a2);
+
+
+ // print elements which are common  in a1 and arr
+
+    var a3=arr.filter(function(e){
+        return a1.includes(e);
+    })
+
+    document.write("<br/> "+a3);
+
+
+ // print elements which are only in a1
+
+    var a4=a1.filter(function(e){
+        return !arr.includes(e);
+    })
+    document.write("<br/> "+a4);
+
+</script>
+
+</html>

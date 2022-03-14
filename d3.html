@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date calculation</title>
+	<script >
+		function daysdiff(a1,a2) {
+			oneday=24*60*60*1000;
+			a1=a1.getTime();
+			a2=a2.getTime();
+			diff=Math.abs(a1-a2);
+			return(diff/oneday);
+
+
+		}
+	</script>
+</head>
+<body>
+<script >
+	d1=new Date();
+	d1.setDate(10);
+	d1.setMonth(2);
+	d2=new Date;
+	document.write("Todays date="+d1+"<br>");
+	document.write("No. of Days left="+daysdiff(d1,d2));
+</script>
+</body>
+</html>
