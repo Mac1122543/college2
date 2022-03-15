@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<script type="text/javascript" src="d3.v6.min.js"></script>
-	<title></title>
-</head>
-<body>
-	<div>Helloworld</div>
-	<div id="Second">How are you</div>
-	<div class="myclass">D3 example</div>
-</body>
+  <head>
+    <script type="text/javascript" src="d3.v6.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div>Helloworld</div>
+    <div id="Second">How are you</div>
+    <div class="myclass">D3 example</div>
+  </body>
 
-<script type="text/javascript">
-	d3.select('div').attr('class','myclass')
-	d3.select('div').attr('class','')
-    d3.select('div').classed('myclass','false');
-
-</script>
-
+  <script type="text/javascript">
+    d3.select("div").attr("class", "myclass");
+    d3.select("div").attr("class", "");
+    d3.select("div").classed("myclass", "false");
+  </script>
 </html>

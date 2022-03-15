@@ -1,0 +1,30 @@
+<persons>
+<person>
+ <name>Anil</name>
+ <age>15</age>
+ <email>anil@gmail.com</email>
+
+</person>
+
+
+
+<person>
+ <name>Gita</name>
+ <age>16</age>
+ <email>Gita@gmail.com</email>
+
+</person>
+
+
+
+<person>
+ <name>Raj</name>
+ <age>17</age>
+ <email>Raj@gmail.com</email>
+
+</person>
+
+
+
+
+</persons>
