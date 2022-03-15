@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        pat_n=/^[A-z]+$/;
+
+        u="zishan";
+      
+
+            if(pat_n.test(u))
+            {
+                alert("username matched");
+                document.write("true");
+            }
+            else
+            {
+                alert("username not matched");
+                document.write("false");
+
+            }
+            
+
+            pat_e=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            e="zedi@gmail.com";
+            if(pat_e.test(e))
+            {
+                alert("email  matched");
+                document.write("true");
+            }
+            else{
+                alert("email is not matched");
+                document.write("false");
+            }
+      
+    </script>
+
+</head>
+<body>
+
+    
+</body>
+</html>

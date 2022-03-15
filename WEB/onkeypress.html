@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>on key press</title>
+	<script type="text/javascript">
+		function fun(c) {
+			obj=document.getElementById("p1");
+			obj.innerHTML="key pressed"+"<br>"+c.keyCode+"<br>"+String.fromCharCode(c.keyCode)
+		}
+	</script>
+</head>
+<body id="p1" onkeypress="fun(event)">
+
+</body>
+</html>
