@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <p id="gtu">Gujarat Technological University</p>
+    <script>
+       size_of_font=1;
+       function fun(x){
+           obj=document.getElementById('gtu');
+           obj.style.color="blue";
+           obj.style.fontsize=x+"px";
+
+
+
+       }
+       setInterval(function(){
+           if(size_of_font<=50)
+           {
+               fun(++size_of_font);
+           }
+       },50);
+
+
+            
+    
+        
+    </script>
+</body>
+</html>
