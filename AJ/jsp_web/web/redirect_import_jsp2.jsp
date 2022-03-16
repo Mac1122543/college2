@@ -9,17 +9,16 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        
     
         <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
         
-        <c:redirect url="newjsp1.jsp">
+        <c:import url="newjsp1.jsp">
             
-            <c:param name="then" value="Admin"/>
-            <%=request.getParameter("then")%>
+       
                 
             
-        </c:redirect>
+        </c:import>
             
         
         
