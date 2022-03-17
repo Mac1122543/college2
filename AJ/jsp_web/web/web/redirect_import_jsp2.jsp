@@ -12,9 +12,14 @@
         
     
         <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-        <%@taglib function         %>
-      
         
+        <c:import url="newjsp1.jsp">
+            
+       
+                
+            
+        </c:import>
+            
         
         
     </body>
