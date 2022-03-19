@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="d3.v6.min.js"></script>
+  </head>
+  <body>
+    <script>
+      d3.xml("http://127.0.0.1:8887/person.xml").then(function (data) {
+        document.write(
+          "===================================================================================="
+        );
+        var personData = data.documentElement.getElementsByTagName("person");
+        for (i = 0; i < personData.length; i++) {
+          document.write("<br/>person" + i + ":" + personData[i].textContent);
+        }
+        document.write(
+          "<BR/><============GETTING PERSON NAMES=============><BR/> "
+        );
+
+      var personName = data.documentElement.getElementsByTagName("name");
+        for (i = 0; i < personName.length; i++) {
+          document.write("<br/>person" + i + ":" + personName[i].textContent);
+        }
+
+
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="d3.v6.min.js"></script>
+  </head>
+  <body>
+    <script>
+      d3.csv("http://127.0.0.1:8887/person.csv").then(function (data) {
+        var filteredData = data.filter(function (e) {
+          return e.age > 25;
+        });
+
+        for (u = 0; u < filteredData.length; u++) {
+          document.write(filteredData[u].name + "<br/>");
+        }
+
+        document.write(
+          "========================================================================="
+        );
+
+        console.log(data.length);
+        for (i = 0; i < data.length; i++) {
+          document.write("name:" + data[i].name + "<br/>");
+          document.write("age:" + data[i].age + "<br/>");
+          document.write("email:" + data[i].email + "<br/>");
+          document.write("<br/>");
+        }
+        console.table(data);
+        document.write(
+          "----------------------------------------------------------------------"
+        );
+
+        for (i = 0; i < data.length; i++) {
+          if (data[i].age > 25) {
+            document.write("<br/>");
+            document.write("name:" + data[i].name + "<br/>");
+            document.write("age:" + data[i].age + "<br/>");
+            document.write("email:" + data[i].email + "<br/>");
+            document.write("<br/>");
+          }
+        }
+
+        //   for (u=0;u<data.length;u++)
+        //   {
+        //     var name=data[i].age.filter(function(e){
+        //           if(data[i].age>25)
+        //           {return data[i].name ;}
+
+        //   });
+        //   document.write(name+"<br/>");
+        // }
+      });
+    </script>
+  </body>
+</html>

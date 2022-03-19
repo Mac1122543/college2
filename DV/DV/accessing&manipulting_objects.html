@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="d3.v6.min.js"></script>
+  </head>
+  <body></body>
+  <script>
+    var emp = [
+      { name: "john", salary: 9000 },
+      { name: "david", salary: 7500 },
+      { name: "ana", salary: 8500 },
+    ];
+    console.log(emp);
+    // console.table(emp);
+
+    // sort in ascending order by salary
+    var e = emp.sort(function (a, b) {
+      return a.salary - b.salary;
+    });
+    console.table(e);
+
+    // sort in ascending order by name
+    var x = emp.sort(function (a, b) {
+      return a.name.charAt(0) - b.name.charAt(0);
+    });
+    console.table(x);
+
+    // filter ojects whose salary is greater than 7500
+    var y = emp.filter(function (a) {
+      return a.salary > 7500;
+    });
+    console.table(y);
+  </script>
+</html>
