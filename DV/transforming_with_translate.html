@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="d3.v6.min.js"></script>
+  </head>
+  <body></body>
+  <script>
+    var mysvg=d3.select('body')
+                .append('svg')
+                .attr('width',500)
+                .attr('height',500);
+
+
+
+  mysvg.append("circle")
+  .attr("cx",125)
+  .attr("cy",45 )
+  .attr("r",30)
+  .attr("fill","blue");
+                
+
+  var gtag=mysvg.append('g')
+.append('circle')
+.append('line');
+
+gtag.attr('transform','translate(400,800)');
+
+
+</script>
+</html>1

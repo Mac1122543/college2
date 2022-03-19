@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="d3.v6.min.js"></script>
+  </head>
+  <body></body>
+  <script>
+    var mysvg=d3.select('body')
+                .append('svg')
+                .attr('width',500)
+                .attr('height',500);
+
+
+  mysvg.append("rect")
+  .attr("x",100)
+  .attr("y",100)
+  .attr("width",50)
+  .attr("height",70)
+  .attr("fill",'red')
+  .attr("stroke",'green')
+  .attr("stroke-width",10);
+
+  mysvg.append("circle")
+  .attr("cx",125)
+  .attr("cy",45 )
+  .attr("r",30)
+  .attr("fill","blue");
+
+// l-leg
+  mysvg.append("line")
+  .attr("x1",100)
+  .attr("y1",170)
+  .attr("x2",100)
+  .attr("y2",200)
+  .attr("stroke","black");
+// r-leg
+  mysvg.append("line")
+  .attr("x1",150)
+  .attr("y1",170)
+  .attr("x2",150)
+  .attr("y2",200)
+  .attr("stroke","black");
+
+
+//   r-hand
+  mysvg.append("line")
+  .attr("x1",155)
+  .attr("y1",125)
+  .attr("x2",200)
+  .attr("y2",100)
+  .attr("stroke","black");
+
+
+
+// l-hand   
+
+  mysvg.append("line")
+  .attr("x1",50)
+  .attr("y1",100)
+  .attr("x2",95)
+  .attr("y2",125)
+  .attr("stroke","black");
+
+
+// neck
+
+  mysvg.append("line")
+  .attr("x1",125)
+  .attr("y1",75)
+  .attr("x2",125)
+  .attr("y2",95)
+  .attr("stroke","black");
+
+
+  </script>
+</html>

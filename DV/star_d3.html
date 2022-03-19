@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="d3.v6.min.js"></script>
+  </head>
+  <body></body>
+  <script>
+      var mysvg=d3.select('body')
+                .append('svg')
+                .attr('width',500)
+                .attr('height',500);
+
+    mysvg.append("path")
+  .attr('d','M 150 100 L 225 200 L 75 200 Z')
+  .attr('fill-opacity',0.5)
+  .attr('fill',"red")
+  .attr('stroke','blue');
+
+
+  mysvg.append("path")
+  .attr('d','M 150 250 L 225 150 L 75 150 Z')
+  .attr('fill',"red")
+  .attr('fill-opacity',0.5)
+  .attr('stroke','blue');
+
+  
+      </script>
+      </html>
