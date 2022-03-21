@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<person>
+    <student>
+        <name>xyz</name>
+        <marks>75</marks>
+        <age>20</age>
+    </student>
+     <student>
+        <name>abcd</name>
+        <marks>74</marks>
+        <age>21</age>
+    </student>
+     <student>
+        <name>pqrs</name>
+        <marks>70</marks>
+        <age>25</age>
+    </student>
+</person>
