@@ -21,14 +21,15 @@
 
   var gtag=mysvg.append('g');
 
-gtag.append("circle")
-  .attr("cx",125)
-  .attr("cy",45 )
-  .attr("r",30)
-  .attr("fill","blue");
+gtag.append("line")
+  .attr("x1",125)
+  .attr("x2",250)
+  .attr("y1",45 )
+  .attr("y2",90)
+  .attr("stroke","black");
   
-gtag.attr('transform','translate(100,200)');
+gtag.attr('transform','translate(10,200) rotate(-10)  scale(2,2)');
 
 
 </script>
-</html>1
+</html>
