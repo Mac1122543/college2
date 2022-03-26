@@ -11,6 +11,10 @@
       <div>
           <button onclick="showbar(mydata1,1)">BarChart1</button>
           <button onclick="showbar(mydata2,2)">BarChart2</button>
+          <button onclick="showbar(mydata3,3)">BarChart1</button>
+          <button onclick="showbar(mydata4,4)">BarChart2</button>
+          <button onclick="loop()" >loop</button>
+
 
       </div>
 
@@ -20,12 +24,14 @@
   </body>
   <script>
     
-    var year=[0,2010,2020];
+    var year=[0,2010,2020,2021,2022];
 
     var mydata1 = [30, 50, 25, 50, 45,66,100];
     var mydata2 = [40, 60, 45, 20, 65,46,80];
+    var mydata3 = [10, 20, 40, 30, 50,70,75];
+    var mydata4 = [43, 69, 75, 25, 60,47,8];
 
-    var barcolor=["","orange","grey"];
+    var barcolor=["","orange","grey","maroon","purple"];
 
 
     function showbar(mydata,j)
@@ -55,6 +61,18 @@
       d3.select('body')
       .select('h3')
       .text(year[j]);
+
+    }
+
+
+
+    function loop()
+    {
+            setTimeout(()=>{showbar(mydata1,1);}, 500);
+            setTimeout(()=>{showbar(mydata2,2);}, 1000);
+            setTimeout(()=>{showbar(mydata3,3);}, 1500);
+            setTimeout(()=>{showbar(mydata4,4);}, 2000);
+
 
     }
 

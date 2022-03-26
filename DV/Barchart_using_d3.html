@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head> 
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,35 +9,33 @@
   </head>
   <body></body>
   <script>
-    var mysvg=d3.select('body')
-                .append('svg')
-                .attr('width',800)
-                .attr('height',800);
+    var mysvg = d3
+      .select("body")
+      .append("svg")
+      .attr("width", 800)
+      .attr("height", 800);
 
+    var mydata = [30, 50, 25, 50, 45,66,100];
+    d3.select("body")
+      .select("svg")
+      .selectAll("rect")
+      .data(mydata)
+      .join("rect")
+      .attr("x", 110)
+      .attr("y", (d, i) => (i + 1) * 100)
+      .transition()
+      .attr("width", (d) => d * 10)
+      .attr("height", 50)
+      .attr("fill", "maroon");
 
-
-  
-                
-
- var mydata=[30,50,25,50,45];
- d3.select('body').select('svg')
-.selectAll('rect')
-.data(mydata)
-.join('rect')
-.attr('x',110)
-.attr('y',(d,i)=>(i+1)*100)
-.attr('width',(d)=>d*10)
-.attr('height',50)
-.attr('fill','orange');
-
-
-d3.select('body').select('svg')
-.selectAll('text')
-.data(mydata)
-.join('text')
-.attr('x',190)
-.attr('y',(d,i)=>(i+1)*100+30)
-.text((d)=>d)
-.attr('fill','blue');
-</script>
+    d3.select("body")
+      .select("svg")
+      .selectAll("text")
+      .data(mydata)
+      .join("text")
+      .attr("x", 190)
+      .attr("y", (d, i) => (i + 1) * 100 + 30)
+      .text((d) => d)
+      .attr("fill", "white");
+  </script>
 </html>
