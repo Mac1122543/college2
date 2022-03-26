@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="d3.v6.min.js"></script>
+  </head>
+  <body></body>
+  <script>
+    var mysvg=d3.select('body')
+                .append('svg')
+                .attr('width',800)
+                .attr('height',800);
+
+
+
+  
+                
+
+ var mydata=[30,50,25,50,45];
+ d3.select('body').select('svg')
+.selectAll('circle')
+.data(mydata)
+.join('circle')
+.attr('cx',(d,i)=>(i+1)*100)
+.attr('cy',200)
+.attr('r',(d)=>d)
+.attr('fill','orange');
+
+
+d3.select('body').select('svg')
+.selectAll('text')
+.data(mydata)
+.join('text')
+.attr('x',(d,i)=>(i+1)*100-10)
+.attr('y',190)
+.text((d)=>d)
+.attr('fill','blue');
+</script>
+</html>

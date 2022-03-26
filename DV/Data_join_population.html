@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="d3.v6.min.js"></script>
+  </head>
+  <body></body>
+  <script>
+    var mysvg=d3.select('body')
+                .append('svg')
+                .attr('width',2000)
+                .attr('height',2000);
+
+
+
+  
+                
+
+ var mydata=[{"name":"asia","population":9600000},
+                {"name":"Europe","population":5400000},
+                {"name":"Europe","population":8300000},
+                {"name":"India","population":6000000}
+
+            ];
+
+
+ d3.select('body').select('svg')
+.selectAll('circle')
+.data(mydata)
+.join('circle')
+.attr('cx',(d,i)=>(i+1)*100)
+.attr('cy',200)
+.attr('r',(d)=>d.population/200000)
+.attr('fill','orange');
+
+
+d3.select('body').select('svg')
+.selectAll('text')
+.data(mydata)
+.join('text')
+.attr('x',(d,i)=>(i+1)*100-10)
+.attr('y',190)
+.text((d)=>d.name)
+.attr('fill','blue');
+</script>
+</html>
