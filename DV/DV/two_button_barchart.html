@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="d3.v6.min.js"></script>
+  </head>
+  <body>
+      <div>
+          <button onclick="showbar(mydata1,1)">BarChart1</button>
+          <button onclick="showbar(mydata2,2)">BarChart2</button>
+
+      </div>
+
+      <svg width="800" height="800"></svg>
+      <h3></h3>
+
+  </body>
+  <script>
+    
+    var year=[0,2010,2020];
+
+    var mydata1 = [30, 50, 25, 50, 45,66,100];
+    var mydata2 = [40, 60, 45, 20, 65,46,80];
+
+    var barcolor=["","orange","grey"];
+
+
+    function showbar(mydata,j)
+    {
+        d3.select("body")
+      .select("svg")
+      .selectAll("rect")
+      .data(mydata)
+      .join("rect")
+      .attr("x", 110)
+      .attr("y", (d, i) => (i + 1) * 100)
+      .transition()
+      .attr("width", (d) => d * 10)
+      .attr("height", 50)
+      .attr("fill", barcolor[j]);
+      
+    d3.select("body")
+      .select("svg")
+      .selectAll("text")
+      .data(mydata)
+      .join("text")
+      .attr("x", 190)
+      .attr("y", (d, i) => (i + 1) * 100 + 30)
+      .text((d)=>d)
+      .style('color',barcolor[j]);
+
+      d3.select('body')
+      .select('h3')
+      .text(year[j]);
+
+    }
+
+
+
+
+
+    // d3.select("body")
+    //   .select("svg")
+    //   .selectAll("rect")
+    //   .data(mydata)
+    //   .join("rect")
+    //   .attr("x", 110)
+    //   .attr("y", (d, i) => (i + 1) * 100)
+    //   .transition()
+    //   .attr("width", (d) => d * 10)
+    //   .attr("height", 50)
+    //   .attr("fill", "maroon");
+
+    // d3.select("body")
+    //   .select("svg")
+    //   .selectAll("text")
+    //   .data(mydata)
+    //   .join("text")
+    //   .attr("x", 190)
+    //   .attr("y", (d, i) => (i + 1) * 100 + 30)
+    //   .text((d) => d)
+    //   .attr("fill", "white");
+  </script>
+</html>

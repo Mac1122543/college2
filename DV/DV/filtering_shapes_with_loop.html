@@ -14,22 +14,39 @@
                 .attr('width',500)
                 .attr('height',500);
 
+ var gtag=mysvg.append('g');
+
+
+ for(i=0;i<10;i++)
+ {
+
+     gtag.append("rect")
+       .attr("x",0)
+       .attr("y",0 )
+       .attr("width",100)
+       .attr("height",50)
+       .attr('transform','translate(200,100) rotate('+(i*10)+')');
+
+ }
 
 
   
-                
 
-  var gtag=mysvg.append('g');
 
-gtag.append("line")
-  .attr("x1",125)
-  .attr("x2",250)
-  .attr("y1",45 )
-  .attr("y2",90)
-  .attr("stroke","black");
+//   firltering shapes
+
+
+gtag.selectAll('rect')
+.filter(':nth-child(even)')
+.attr('fill','blue');
+
+gtag.selectAll('rect')
+.filter(':nth-child(odd)')
+.attr('fill','pink');
+
+
+
+
   
-gtag.attr('transform','translate(10,200) rotate(10)  scale(2,2)');
-
-
-</script>
+  </script>
 </html>

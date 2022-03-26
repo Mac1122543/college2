@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="d3.v6.min.js"></script>
+  </head>
+  <body></body>
+  <script>
+    var mysvg=d3.select('body')
+                .append('svg')
+                .attr('width',500)
+                .attr('height',500);
+
+ var gtag=mysvg.append('g');
+
+gtag.append("rect")
+  .attr("x",0)
+  .attr("y",0 )
+  .attr("width",100)
+  .attr("height",50)
+  .attr('transform','translate(200,100) rotate(0)');
+
+  gtag.append("rect")
+  .attr("x",0)
+  .attr("y",0 )
+  .attr("width",100)
+  .attr("height",50)
+  .attr('transform','translate(200,100) rotate(10)');
+
+
+  gtag.append("rect")
+  .attr("x",0)
+  .attr("y",0 )
+  .attr("width",100)
+  .attr("height",50)
+  .attr('transform','translate(200,100) rotate(20)');
+
+
+  gtag.append("rect")
+  .attr("x",0)
+  .attr("y",0 )
+  .attr("width",100)
+  .attr("height",50)
+  .attr('transform','translate(200,100) rotate(30)');
+
+  gtag.append("rect")
+  .attr("x",0)
+  .attr("y",0 )
+  .attr("width",100)
+  .attr("height",50)
+  .attr('transform','translate(200,100) rotate(40)');
+
+
+
+//   firltering shapes
+
+
+gtag.selectAll('rect')
+.filter(':nth-child(even)')
+.attr('fill','blue');
+
+gtag.selectAll('rect')
+.filter(':nth-child(odd)')
+.attr('fill','pink');
+
+
+
+
+  
+  </script>
+</html>

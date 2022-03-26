@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="d3.v6.min.js"></script>
+  </head>
+  <body></body>
+  <script>
+
+
+var mysvg=d3.select('body')
+                .append('svg')
+                .attr('width',1000)
+                .attr('height',1000);
+
+
+    mysvg.append('circle') 
+    .attr('cx',100)
+    .attr('cy',100)
+    .attr('r',30)
+    .transition()
+    .delay(50)
+    .duration(50)
+    .attr('cx',400)
+    .transition()
+    .delay(50)
+    .duration(50)
+    .attr('cy',400)
+    .transition()
+    .delay(50)
+    .duration(50)
+    .attr('cx',100)
+    .transition()
+    .delay(50)
+    .duration(50)
+    .attr('cx',100)
+    .attr('cy',100);
+
+  
+
+
+
+
+
+
+//   var gtag=mysvg.append('g');
+
+// gtag.append("circle")
+//   .attr("cx",125)
+//   .attr("cy",45 )
+//   .attr("r",30)
+//   .attr("fill","blue");
+  
+// gtag.attr('transform','translate(100,200)');
+
+
+</script>
+</html>1
