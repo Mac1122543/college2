@@ -11,9 +11,10 @@
       <div>
           <button onclick="showbar(mydata1,1)">BarChart1</button>
           <button onclick="showbar(mydata2,2)">BarChart2</button>
-          <button onclick="showbar(mydata3,3)">BarChart1</button>
-          <button onclick="showbar(mydata4,4)">BarChart2</button>
-          <button onclick="loop()" >loop</button>
+          <button onclick="showbar(mydata3,3)">BarChart3</button>
+          <button onclick="showbar(mydata4,4)">BarChart4</button>
+          <button onclick="loop_pause()">pause</button>
+          <button onclick="loop()" >playall</button>
 
 
       </div>
@@ -65,13 +66,23 @@
     }
 
 
+    function loop_pause()
+    {
+        clearInterval(t1);
+        clearInterval(t2);
+        clearInterval(t3);
+        clearInterval(t4);
+    }
 
+var t1,t2,t3,t4;
     function loop()
     {
-            setTimeout(()=>{showbar(mydata1,1);}, 500);
-            setTimeout(()=>{showbar(mydata2,2);}, 1000);
-            setTimeout(()=>{showbar(mydata3,3);}, 1500);
-            setTimeout(()=>{showbar(mydata4,4);}, 2000);
+    
+        
+           t1=setTimeout(()=>{showbar(mydata1,1);}, 500);
+            t2=setTimeout(()=>{showbar(mydata2,2);}, 2000);
+            t3=setTimeout(()=>{showbar(mydata3,3);}, 3000);
+            t4=setTimeout(()=>{showbar(mydata4,4);}, 4000);
 
 
     }
